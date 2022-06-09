@@ -1,0 +1,22 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.label {
+    -fx-font-weight: bold;
+} 
+
+.menu-gap {
+    -fx-padding:  0 0 0 16px;
+}
+
+.button {
+    -fx-text-fill: blue; 
+    -fx-font-weight: bold;
+}
+
+.result {
+    -fx-font-weight: bold;
+    -fx-font-size: 20px; 
+}
+
+.error {
+    -fx-text-fill: red; 
+}

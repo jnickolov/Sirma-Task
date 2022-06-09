@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project SirmaTask_Coworkers with Jar-in-Jar Loader">
+    <!--this file was created by Eclipse Runnable JAR file Export Wizard-->
+    <!--ANT 1.7 is required-->
+    <!--define folder properties-->
+    <property name="dir.buildfile" value="."/>
+    <property name="dir.workspace" value="${dir.buildfile}/.."/>
+    <property name="dir.jarfile" value="${dir.buildfile}/build"/>
+    <target name="create_run_jar">
+        <jar destfile="${dir.jarfile}/SIRMA_task.jar">
+            <manifest>
+                <attribute name="Main-Class" value="org.eclipse.jdt.internal.jarinjarloader.JarRsrcLoader"/>
+                <attribute name="Rsrc-Main-Class" value="task.sirma.application.Main"/>
+                <attribute name="Class-Path" value="."/>
+                <attribute name="Rsrc-Class-Path" value="./ org.eclipse.fx.ide.css.jfx8_3.7.0.202010120832.jar jfxrt.jar"/>
+            </manifest>
+            <zipfileset src="jar-in-jar-loader.zip"/>
+            <zipfileset dir="C:/Users/user/.p2/pool/plugins" includes="org.eclipse.fx.ide.css.jfx8_3.7.0.202010120832.jar"/>
+            <fileset dir="${dir.buildfile}/classes"/>
+            <zipfileset dir="C:/Program Files/Java/jdk1.8.0_321/jre/lib/ext" includes="jfxrt.jar"/>
+        </jar>
+    </target>
+</project>
